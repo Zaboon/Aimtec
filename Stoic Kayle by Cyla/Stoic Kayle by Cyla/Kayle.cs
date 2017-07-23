@@ -10,7 +10,7 @@ namespace Stoic_Kayle_by_Cyla
     {
         public static Obj_AI_Hero Player = ObjectManager.GetLocalPlayer();
 
-        private void Game_OnUpdate()
+        private void OnUpdate()
         {
             var Modes = new Modes();
             var percentHealW = WorldMenu.miscs["lifeW"].As<MenuSlider>().Value;
@@ -49,7 +49,7 @@ namespace Stoic_Kayle_by_Cyla
         {
             WorldMenu.Setup();
             ManageSpells.SetupSpells();
-            Game.OnUpdate += Game_OnUpdate;
+            Game.OnUpdate += OnUpdate;
             Console.WriteLine("Made by Zaboon/Cyla");
         }
 
