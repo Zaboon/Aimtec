@@ -78,8 +78,8 @@ namespace Stoic_Kayle_by_Cyla
         }
         public void LaneClear()
         {
-            bool useE = WorldMenu.harass["useE"].As<MenuBool>().Enabled;
-            var Mana = WorldMenu.harass["mana"].As<MenuSlider>().Value;
+            bool useE = WorldMenu.laneclear["useE"].As<MenuBool>().Enabled;
+            var Mana = WorldMenu.laneclear["mana"].As<MenuSlider>().Value;
 
             if (useE && ManageSpells.E.Ready && Player.ManaPercent() >= Mana)
             {
