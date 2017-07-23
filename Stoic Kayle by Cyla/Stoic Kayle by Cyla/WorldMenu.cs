@@ -7,7 +7,7 @@ namespace Stoic_Kayle_by_Cyla
     public static class     WorldMenu
     {
         public static       Orbwalker Orbwalker = new Orbwalker();
-        public static       Menu Menu = new Menu("Made by Zaboon babe", "Made by Zaboon babe", true);
+        public static       Menu Menu = new Menu("Stoic Kayle by Cyla", "Stoic Kayle by Cyla", true);
         public static       Menu Combo;
         public static       Menu harass;
         public static       Menu laneclear;
