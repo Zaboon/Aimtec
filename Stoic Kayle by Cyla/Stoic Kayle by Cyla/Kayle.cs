@@ -4,6 +4,7 @@ using Aimtec.SDK.Menu.Components;
 using Aimtec.SDK.Orbwalking;
 using Aimtec.SDK.Extensions;
 
+
 namespace Stoic_Kayle_by_Cyla
 {
     class Kayle
@@ -33,12 +34,12 @@ namespace Stoic_Kayle_by_Cyla
 
             }
 
-            if (WorldMenu.miscs["autoW"].As<MenuBool>().Enabled && ManageSpells.W.Ready && Player.HealthPercent() <= percentHealW)
+            if (WorldMenu.miscs["autoW"].As<MenuBool>().Enabled && ManageSpells.W.Ready && Player.HealthPercent() <= percentHealW && !(Player.IsRecalling()))
             {
                 ManageSpells.W.Cast(Player);
             }
 
-            if (WorldMenu.miscs["autoR"].As<MenuBool>().Enabled && ManageSpells.R.Ready && Player.HealthPercent() <= percentHealR)
+            if (WorldMenu.miscs["autoR"].As<MenuBool>().Enabled && ManageSpells.R.Ready && Player.HealthPercent() <= percentHealR && !(Player.IsRecalling()))
             {
                 ManageSpells.R.Cast(Player);
             }

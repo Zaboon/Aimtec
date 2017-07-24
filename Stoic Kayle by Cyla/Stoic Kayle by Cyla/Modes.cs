@@ -8,7 +8,6 @@ using Aimtec.SDK.Extensions;
 using Aimtec.SDK.Damage;
 using Aimtec.SDK.Prediction.Skillshots;
 using System.Linq;
-using Aimtec.SDK.Extensions;
 using System;
 
 
@@ -57,7 +56,7 @@ namespace Stoic_Kayle_by_Cyla
             }
         }
 
-        public void Harass()
+        public void     Harass()
         {
             bool useQ = WorldMenu.harass["useQ"].As<MenuBool>().Enabled;
             bool useE = WorldMenu.harass["useE"].As<MenuBool>().Enabled;
@@ -76,7 +75,7 @@ namespace Stoic_Kayle_by_Cyla
                     ManageSpells.E.Cast(Player);
             }
         }
-        public void LaneClear()
+        public void     LaneClear()
         {
             bool useE = WorldMenu.laneclear["useE"].As<MenuBool>().Enabled;
             var Mana = WorldMenu.laneclear["mana"].As<MenuSlider>().Value;
